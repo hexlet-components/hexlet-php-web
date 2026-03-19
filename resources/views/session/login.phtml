@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><title>Login</title></head>
+<body>
+<h1>Вход</h1>
+<?php if ($error !== null): ?><p style="color: red;"><?= htmlspecialchars($error) ?></p><?php endif; ?>
+<form action="/login" method="post">
+  <div><label>Логин <input type="text" name="auth[login]"></label></div>
+  <div><label>Пароль <input type="password" name="auth[password]"></label></div>
+  <button type="submit">Войти</button>
+</form>
+</body></html>

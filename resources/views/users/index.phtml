@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><title>Users</title></head>
+<body>
+<h1>Users</h1>
+<p>page: <?= $page ?>, per: <?= $per ?>, status: <?= $status ?? 'all' ?></p>
+<ul>
+  <?php foreach ($users as $user): ?>
+    <li><?= htmlspecialchars($user['name']) ?> (<?= htmlspecialchars($user['status']) ?>)</li>
+  <?php endforeach; ?>
+</ul>
+</body></html>

@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><title>Image upload</title></head>
+<body>
+<h1>Загрузка картинки</h1>
+<form action="/image-upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="image" accept="image/*">
+  <button type="submit">Загрузить</button>
+</form>
+<?php if ($error !== null): ?><p style="color: red;"><?= htmlspecialchars($error) ?></p><?php endif; ?>
+<?php if ($imageDataUrl !== null): ?><img src="<?= $imageDataUrl ?>" alt="Uploaded image" style="max-width: 360px;"><?php endif; ?>
+</body></html>

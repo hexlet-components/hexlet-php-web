@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><title>Welcome settings</title></head>
+<body>
+<h1>Настройки страницы</h1>
+<p>Текущее имя: <?= $name === '' ? 'Гость' : htmlspecialchars($name) ?></p>
+<p>Текущая тема: <?= htmlspecialchars($theme) ?></p>
+<form action="/welcome" method="post">
+  <div><label>Имя <input type="text" name="settings[name]" value="<?= htmlspecialchars($name) ?>"></label></div>
+  <div>
+    <label>Тема
+      <select name="settings[theme]">
+        <option value="light" <?= $theme === 'light' ? 'selected' : '' ?>>light</option>
+        <option value="dark" <?= $theme === 'dark' ? 'selected' : '' ?>>dark</option>
+      </select>
+    </label>
+  </div>
+  <button type="submit">Сохранить</button>
+</form>
+<form action="/welcome/reset" method="post"><button type="submit">Сбросить настройки</button></form>
+</body></html>

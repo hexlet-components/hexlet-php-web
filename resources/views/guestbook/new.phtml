@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><title>New message</title></head>
+<body>
+<h1>Новое сообщение</h1>
+<form action="/guestbook" method="post">
+  <div>
+    <label>Имя <input type="text" name="guestbook[name]" value="<?= htmlspecialchars($form['name']) ?>"></label>
+  </div>
+  <div>
+    <label>Сообщение
+      <textarea name="guestbook[message]" rows="5"><?= htmlspecialchars($form['message']) ?></textarea>
+    </label>
+    <?php if (isset($errors['message'])): ?><div style="color: red;"><?= htmlspecialchars($errors['message']) ?></div><?php endif; ?>
+  </div>
+  <div>
+    <label><input type="checkbox" name="guestbook[not_bot]" <?= $form['not_bot'] ? 'checked' : '' ?>> Я не бот</label>
+    <?php if (isset($errors['not_bot'])): ?><div style="color: red;"><?= htmlspecialchars($errors['not_bot']) ?></div><?php endif; ?>
+  </div>
+  <button type="submit">Отправить</button>
+</form>
+</body></html>

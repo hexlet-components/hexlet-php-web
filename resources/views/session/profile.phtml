@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><title>Profile</title></head>
+<body>
+<h1>Профиль</h1>
+<p>Вы вошли как: <strong><?= htmlspecialchars($user['login']) ?></strong></p>
+<form action="/logout" method="post"><button type="submit">Выйти</button></form>
+</body></html>

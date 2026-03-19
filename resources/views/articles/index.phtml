@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><title>Articles</title></head>
+<body>
+<h1>Статьи</h1>
+<ul>
+  <?php foreach ($articles as $article): ?>
+    <li><a href="/articles/<?= urlencode($article['slug']) ?>"><?= htmlspecialchars($article['title']) ?></a></li>
+  <?php endforeach; ?>
+</ul>
+</body></html>

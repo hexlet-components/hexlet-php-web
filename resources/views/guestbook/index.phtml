@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><title>Guestbook</title></head>
+<body>
+<h1>Гостевая книга</h1>
+<p><a href="/guestbook/new">Добавить сообщение</a></p>
+<?php if (empty($messages)): ?>
+  <p>Пока нет сообщений.</p>
+<?php else: ?>
+  <ul>
+    <?php foreach ($messages as $item): ?>
+      <li><strong><?= htmlspecialchars($item['name']) ?>:</strong> <?= htmlspecialchars($item['message']) ?></li>
+    <?php endforeach; ?>
+  </ul>
+<?php endif; ?>
+</body></html>
