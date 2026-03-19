@@ -1,0 +1,14 @@
+{
+  "name": "hexlet/php-web-demo",
+  "description": "Final demo project for PHP Web course",
+  "type": "project",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    },
+    "files": [
+      "src/Renderer.php"
+    ]
+  }
+}

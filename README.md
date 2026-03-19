@@ -3,5 +3,6 @@
 Запуск:
 
 ```bash
+composer install
 make start
 ```

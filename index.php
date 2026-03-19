@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 session_start();
 
-require_once __DIR__ . '/src/Application.php';
-require_once __DIR__ . '/src/render.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
+use App\Application;
+use function App\Renderer\render;
 
 function loadGuestbook(string $path): array
 {

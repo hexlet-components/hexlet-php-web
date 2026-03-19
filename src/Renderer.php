@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace App\Renderer;
+
 function render(string $template, array $vars = []): string
 {
     $path = __DIR__ . '/../resources/views/' . $template . '.phtml';
